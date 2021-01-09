@@ -12,7 +12,7 @@ Our model can properly recover both galaxy shapes and noise characteristics, whe
 ![image](https://github.com/QiufanLin/ImageTranslation/blob/main/Figures/variant_analysis.png)
 
 ## Data
-In our experiments, we use multi-band galaxy images from the Sloan Digital Sky Survey (SDSS; Alam et al. 2015) and the Canada France Hawaii Telescope Legacy Survey (CFHT; Gwyn et al. 2012). Each image contains a galaxy at the center and covers five photometric passbands (*u*, *g*, *r*, *i*, *z*). To span over the same angular scale, the SDSS images are 64×64 pixels in size and the CFHT images are 136×136 pixels.
+In our experiments, we use multi-band galaxy images from the Sloan Digital Sky Survey (SDSS; Alam et al. 2015) and the Canada France Hawaii Telescope Legacy Survey (CFHT; Gwyn et al. 2012). Each image contains a galaxy at the center and covers five photometric passbands (*u*, *g*, *r*, *i*, *z*). To ensure the same angular scale, we make SDSS cutout images of 64×64 pixels in size and CFHT cutout images of 136×136 pixels.
 
 The pixel intensity of raw CFHT images is reduced by a factor of 1,000 in order to match the intensity level of SDSS images. Then the pixel intensity of all images is rescaled with the following equation which increases the noise amplitude and thus facilitates noise reconstruction.
 
@@ -20,9 +20,9 @@ I = -\sqrt{-I_0 + 1.0} + 1.0 if I_0 < 0
 
 I = \sqrt{I_0 + 1.0} - 1.0 if I_0 > 0
 
-I and I_0 denote the rescaled intensity and the original intensity, respectively. The images after this rescaling opertion are saved as *rescaled* images in "./examples/img_test_examples.npz" and taken as input to the networks.
+I and I_0 denote the rescaled intensity and the original intensity, respectively. (Negative fluxes are due to image pre-processing.) The images after this rescaling opertion are saved as *rescaled* images in "./examples/img_test_examples.npz" and taken as input to the networks.
 
-We also create a sample of CFHT images of size 64×64 pixels as SDSS images by regridding original CFHT images with the Bilinear Interpolation. These are saved as *regrided* images in "./examples/img_test_examples.npz" and used in Experiments (g) CycleGAN and (h) AugCGAN (see below).
+We also create a sample of CFHT images of size 64×64 pixels as SDSS images by regridding the rescaled CFHT images with the Bilinear Interpolation. These are saved as *regrided* images in "./examples/img_test_examples.npz" and used in Experiments (g) CycleGAN and (h) AugCGAN (see below).
 
 ![image](https://github.com/QiufanLin/ImageTranslation/blob/main/Figures/translation.png)
 
@@ -36,7 +36,7 @@ We develop a two-step training scheme. Step One: (i) update the Autoencoders *A_
 ## Train
 > python model.py --method=? --phase=train
 
-For access to full SDSS and CFHT datasets, please refer to Alam et al. (2015) and Gwyn et al. (2012).
+For access to the full SDSS and CFHT datasets, please refer to Alam et al. (2015) and Gwyn et al. (2012).
 
 ## Test/reload a trained model
 > python model.py --method=? --phase=test
