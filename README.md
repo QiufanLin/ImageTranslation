@@ -20,7 +20,7 @@ I = -\sqrt{-I_0 + 1.0} + 1.0 if I_0 < 0
 
 I = \sqrt{I_0 + 1.0} - 1.0 if I_0 > 0
 
-I and I_0 denote the rescaled intensity and the original intensity, respectively. (Negative fluxes are due to image pre-processing.) The images after this rescaling opertion are saved as *rescaled* images in "./examples/img_test_examples.npz" and taken as input to the networks.
+I and I_0 denote the rescaled intensity and the original intensity, respectively. (Negative fluxes are due to image pre-processing.) The images after this rescaling opertion are saved as *rescaled* images in "./examples/img_test_examples.npz" and taken as inputs to the networks.
 
 We also create a sample of CFHT images of size 64×64 pixels as SDSS images by regridding the rescaled CFHT images with the Bilinear Interpolation. These are saved as *regrided* images in "./examples/img_test_examples.npz" and used in Experiments (g) CycleGAN and (h) AugCGAN (see below).
 
