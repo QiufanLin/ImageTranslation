@@ -27,7 +27,7 @@ We also create a sample of CFHT images of size 64×64 pixels as SDSS images by r
 ![image](https://github.com/QiufanLin/ImageTranslation/blob/main/Figures/translation.png)
 
 ## Model description
-We develop a two-step training scheme. Step One: (i) update the Autoencoders *A_X*, *A_Y* with the original images *x*, *y* from the two domains *X*, *Y*, respectively; (ii) adversarially update the Noise Emulators *NE_X*, *NE_Y* and the Discriminators D_X, D_Y while keeping *A_X*, *A_Y* fixed and taking Gaussian random seeds *z1*, *z2* as inputs to *NE_X*, *NE_Y* to produce noise. Step Two: update the Generators *G_(X→Y)*, *G_(Y→X)*, using noise produced by *NE_X*, *NE_Y*. 
+We develop a two-step training scheme. Step 1: (i) update the Autoencoders *A_X*, *A_Y* with the original images *x*, *y* from the two domains *X*, *Y*, respectively; (ii) adversarially update the Noise Emulators *NE_X*, *NE_Y* and the Discriminators D_X, D_Y while keeping *A_X*, *A_Y* fixed and taking Gaussian random seeds *z1*, *z2* as inputs to *NE_X*, *NE_Y* to produce noise. Step 2: update the Generators *G_(X→Y)*, *G_(Y→X)*, using noise produced by *NE_X*, *NE_Y*. 
 
 ![image](https://github.com/QiufanLin/ImageTranslation/blob/main/Figures/graph.png)
 
@@ -43,9 +43,9 @@ For access to the full SDSS and CFHT datasets, please refer to Alam et al. (2015
 
 ("?" stands for a method)
 
-method == 1: Ours - Step 1
+method == 1: Step 1 of our model.
 
-method == 2: Ours - Step 2
+method == 2: Step 2 of our model.
 
 method == 3: (a. Ad.pix2pix or “Adapted pix2pix”) One-way translation using our networks with the identity loss but not the Autoencoders or the Noise Emulators, similar to pix2pix (Isola et al. 2017).
 
