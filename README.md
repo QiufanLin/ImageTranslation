@@ -41,7 +41,7 @@ For access to the full SDSS and CFHT datasets, please refer to Alam et al. (2015
 ## Test/reload a trained model
 > python model.py --method=? --phase=test
 
-("?" stands for a method)
+("?" stands for a method. Method 1 and Method 2 have to be executed consecutively.)
 
 method == 1: Step 1 of our model.
 
