@@ -28,7 +28,10 @@ I and I_0 denote the rescaled intensity and the original intensity, respectively
 
 We also create a sample of CFHT images of size 64×64 pixels as SDSS images by regridding the rescaled CFHT images with the Bilinear Interpolation. These are saved as *regrided* images in "./examples/img_test_examples.npz" and used in Experiments (g) CycleGAN and (h) AugCGAN.
 
-See below for access to trained models and image examples.
+Trained models and image examples can be downloaded from
+https://drive.google.com/drive/folders/1lxkZFvLgHLsHrTF4lJwXs7shR24TZyjH?usp=sharing
+
+"./examples" only contains a small sample of 32 galaxies. For access to the full SDSS and CFHT datasets, please refer to Alam et al. (2015) and Gwyn et al. (2012).
 
 ![image](https://github.com/QiufanLin/ImageTranslation/blob/main/Figures/translation.png)
 
@@ -41,11 +44,6 @@ We develop a two-step training scheme. Step 1: (i) update the Autoencoders *A_X*
 
 ## Train
 > python model.py --method=? --phase=train
-
-Trained models and image examples can be downloaded from
-https://drive.google.com/drive/folders/1lxkZFvLgHLsHrTF4lJwXs7shR24TZyjH?usp=sharing
-
-"./examples" only contains a small sample of 32 galaxies. For access to the full SDSS and CFHT datasets, please refer to Alam et al. (2015) and Gwyn et al. (2012).
 
 ## Test/reload a trained model
 > python model.py --method=? --phase=test
