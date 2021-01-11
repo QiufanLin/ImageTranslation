@@ -42,7 +42,7 @@ We develop a two-step training scheme. Step 1: (i) update the Autoencoders *A_X*
 ## Train
 > python model.py --method=? --phase=train
 
-Trained models and image examples can be dwonloaded from
+Trained models and image examples can be downloaded from
 https://drive.google.com/drive/folders/1lxkZFvLgHLsHrTF4lJwXs7shR24TZyjH?usp=sharing
 
 "./examples" only contains a small sample of 32 galaxies. For access to the full SDSS and CFHT datasets, please refer to Alam et al. (2015) and Gwyn et al. (2012).
