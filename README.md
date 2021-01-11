@@ -3,10 +3,10 @@
 In this work, we propose a two-way galaxy image translation model for that exploits both paired and unpaired images in a semi-supervised manner, and introduce a noise emulating module that is able to learn and reconstruct noise characterized by high-frequency features. We show that our model recovers global and local properties effectively and outperforms benchmark image translation models. To our best knowledge, this work is the first attempt to apply semi-supervised methods and noise reconstruction techniques in astrophysical studies.
 
 The code is tested using: 
-### Python 2.7.15
-### TensorFlow 1.12.0
-### Intel(R) Core(TM) i9-7920X CPU
-### Titan V / GeForce RTX 2080 Ti GPU.
+- Python 2.7.15
+- TensorFlow 1.12.0
+- CPU: Intel(R) Core(TM) i9-7920X
+- GPU: Titan V / GeForce RTX 2080 Ti
 
 ## Results
 Our model can properly recover both galaxy shapes and noise characteristics, whereas there are shortcomings for other methods with no identity constrant through paired images or no noise reconstructing mechanism.
