@@ -36,7 +36,7 @@ We develop a two-step training scheme. Step 1: (i) update the Autoencoders *A_X*
 ## Train
 > python model.py --method=? --phase=train
 
-For access to the full SDSS and CFHT datasets, please refer to Alam et al. (2015) and Gwyn et al. (2012).
+"./examples" only contains a small sample of 32 galaxies. For access to the full SDSS and CFHT datasets, please refer to Alam et al. (2015) and Gwyn et al. (2012).
 
 ## Test/reload a trained model
 > python model.py --method=? --phase=test
