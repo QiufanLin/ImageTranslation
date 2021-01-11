@@ -2,7 +2,11 @@
 
 In this work, we propose a two-way galaxy image translation model for that exploits both paired and unpaired images in a semi-supervised manner, and introduce a noise emulating module that is able to learn and reconstruct noise characterized by high-frequency features. We show that our model recovers global and local properties effectively and outperforms benchmark image translation models. To our best knowledge, this work is the first attempt to apply semi-supervised methods and noise reconstruction techniques in astrophysical studies.
 
-The code is tested using Python 2.7.15, TensorFlow 1.12.0, an Intel(R) Core(TM) i9-7920X CPU and a Titan V GPU.
+The code is tested using: 
+# Python 2.7.15
+# TensorFlow 1.12.0
+# Intel(R) Core(TM) i9-7920X CPU
+# Titan V / GeForce RTX 2080 Ti GPU.
 
 ## Results
 Our model can properly recover both galaxy shapes and noise characteristics, whereas there are shortcomings for other methods with no identity constrant through paired images or no noise reconstructing mechanism.
@@ -22,7 +26,9 @@ I = \sqrt{I_0 + 1.0} - 1.0 if I_0 > 0
 
 I and I_0 denote the rescaled intensity and the original intensity, respectively. (Negative fluxes are due to image pre-processing.) The images after this rescaling opertion are saved as *rescaled* images in "./examples/img_test_examples.npz" and taken as inputs to the networks.
 
-We also create a sample of CFHT images of size 64×64 pixels as SDSS images by regridding the rescaled CFHT images with the Bilinear Interpolation. These are saved as *regrided* images in "./examples/img_test_examples.npz" and used in Experiments (g) CycleGAN and (h) AugCGAN (see below).
+We also create a sample of CFHT images of size 64×64 pixels as SDSS images by regridding the rescaled CFHT images with the Bilinear Interpolation. These are saved as *regrided* images in "./examples/img_test_examples.npz" and used in Experiments (g) CycleGAN and (h) AugCGAN.
+
+See below for access to trained models and image examples.
 
 ![image](https://github.com/QiufanLin/ImageTranslation/blob/main/Figures/translation.png)
 
@@ -35,6 +41,9 @@ We develop a two-step training scheme. Step 1: (i) update the Autoencoders *A_X*
 
 ## Train
 > python model.py --method=? --phase=train
+
+Trained models and image examples can be dwonloaded from
+https://drive.google.com/drive/folders/1lxkZFvLgHLsHrTF4lJwXs7shR24TZyjH?usp=sharing
 
 "./examples" only contains a small sample of 32 galaxies. For access to the full SDSS and CFHT datasets, please refer to Alam et al. (2015) and Gwyn et al. (2012).
 
