@@ -41,7 +41,7 @@ We develop a two-step training scheme. Step 1: (i) update the Autoencoders *A_X*
 ## Test/reload a trained model
 > python model.py --method=? --phase=test
 
-("?" stands for a method. Method 1 and Method 2 have to be executed consecutively.)
+("?" stands for a method. Method 1 and Method 2 have to be executed consecutively. "./examples" contains saved reconstructed images from each method.)
 
 method == 1: Step 1 of our model.
 
