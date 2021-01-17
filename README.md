@@ -9,7 +9,7 @@ The code is tested using:
 - GPU: Titan V / GeForce RTX 2080 Ti
 
 ## Results
-Our model can properly recover both galaxy shapes and noise characteristics, whereas there are shortcomings for other methods with no identity constrant through paired images or no noise reconstructing mechanism.
+Our model can properly recover both galaxy shapes and noise characteristics, whereas there are shortcomings for other methods with no identity constrant through paired images or no noise reconstructing mechanism. Note: the noise amplitude for each reconstructed image is randomly sampled, thus it does not necessarily match the noise amplitude of the original counterpart.
 
 ![image](https://github.com/QiufanLin/ImageTranslation/blob/main/Figures/image_examples.png)
 
