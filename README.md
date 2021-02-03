@@ -1,5 +1,7 @@
 # Galaxy Image Translation with Semi-supervised Noise-reconstructed Generative Adversarial Networks
 
+ArXiv: https://arxiv.org/abs/2101.07389
+
 In this work, we propose a two-way galaxy image translation model for that exploits both paired and unpaired images in a semi-supervised manner, and introduce a noise emulating module that is able to learn and reconstruct noise characterized by high-frequency features. We show that our model recovers global and local properties effectively and outperforms benchmark image translation models. To our best knowledge, this work is the first attempt to apply semi-supervised methods and noise reconstruction techniques in astrophysical studies.
 
 The code is tested using: 
@@ -27,6 +29,8 @@ I = \sqrt{I_0 + 1.0} - 1.0 if I_0 > 0
 I and I_0 denote the rescaled intensity and the original intensity, respectively. (Negative fluxes are due to image pre-processing.) The images after this rescaling opertion are saved as *rescaled* images in "./examples/img_test_examples.npz" and taken as inputs to the networks.
 
 We also create a sample of CFHT images of size 64×64 pixels as SDSS images by regridding the rescaled CFHT images with the Bilinear Interpolation. These are saved as *regrided* images in "./examples/img_test_examples.npz" and used in Experiments (g) CycleGAN and (h) AugCGAN.
+
+For data augmentation, the images inputted to the networks during training are randomly flipped and rotated with 90 deg steps.
 
 Trained models and image examples can be downloaded from
 https://drive.google.com/drive/folders/1lxkZFvLgHLsHrTF4lJwXs7shR24TZyjH?usp=sharing
